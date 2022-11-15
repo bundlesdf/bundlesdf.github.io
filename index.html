@@ -98,7 +98,12 @@
   </div>
 </section>
 
-
+<style>
+model-viewer {
+  width: 400px;
+  height: 400px;
+}
+</style>
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -109,7 +114,7 @@
           shadow-intensity="1" 
           ar environment-image="static/models/thatch_chapel_2k.hdr"
           auto-rotate rotation-per-second="40deg" 
-          camera-controls 
+          camera-controls touch-action="pan-y"
           >
           </model-viewer>
         </span>
