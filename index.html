@@ -26,7 +26,7 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -98,21 +98,25 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> 
 
-      </h2>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <span>
+          <model-viewer alt="chair" 
+          src="static/models/AP13.glb" 
+          shadow-intensity="1" 
+          ar environment-image="static/models/thatch_chapel_2k.hdr"
+          auto-rotate rotation-per-second="40deg" 
+          camera-controls 
+          >
+          </model-viewer>
+        </span>
+      </div>
     </div>
   </div>
 </section>
- -->
 
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
