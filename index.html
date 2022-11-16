@@ -98,15 +98,91 @@
   </div>
 </section>
 
+
 <style>
 model-viewer {
   width: 400px;
   height: 400px;
 }
 </style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+We present a real-time method for 6-DoF tracking of an unknown object from a monocular RGBD video sequence, while simultaneously performing neural 3D reconstruction of the object. Our method works for arbitrary rigid objects, even when visual texture is largely absent. The object is assumed to be segmented in the first frame only.  No additional information is required, and no assumption is made about the interaction agent. Key to our method is a Neural Object Field that is learned concurrently with a pose graph optimization process in order to robustly accumulate information into a consistent 3D representation capturing both geometry and appearance. A dynamic pool of posed memory frames is automatically maintained to facilitate communication between these threads. Our approach handles challenging sequences with large pose changes, partial and full occlusion, untextured surfaces, and specular highlights. We show results on HO3D, YCBInEOAT, and BEHAVE datasets, demonstrating that our method significantly outperforms existing approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+<!--     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+ -->    
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <span class="link-block">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="https://i.imgur.com/CrL5C4A.mp4"
+                type="video/mp4">
+          </video>
+        </span>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <h2 class="title is-3">Behave Results</h2>
+      </div>
+      <div class="columns is-centered">
+        <span class="link-block">  
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="https://i.imgur.com/VAuQ8k5.mp4"
+                type="video/mp4">
+          </video>
+        </span>
+        <span class="link-block">
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="https://i.imgur.com/tsO9CHX.mp4"
+                type="video/mp4">
+          </video>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <h2 class="title is-3">3D models</h2>
+      </div>        
       <div class="columns is-centered">
         <span>
           <model-viewer alt="chair" 
@@ -122,6 +198,8 @@ model-viewer {
     </div>
   </div>
 </section>
+
+
 
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
@@ -181,35 +259,7 @@ model-viewer {
 </section> -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-We present a real-time method for 6-DoF tracking of an unknown object from a monocular RGBD video sequence, while simultaneously performing neural 3D reconstruction of the object. Our method works for arbitrary rigid objects, even when visual texture is largely absent. The object is assumed to be segmented in the first frame only.  No additional information is required, and no assumption is made about the interaction agent. Key to our method is a Neural Object Field that is learned concurrently with a pose graph optimization process in order to robustly accumulate information into a consistent 3D representation capturing both geometry and appearance. A dynamic pool of posed memory frames is automatically maintained to facilitate communication between these threads. Our approach handles challenging sequences with large pose changes, partial and full occlusion, untextured surfaces, and specular highlights. We show results on HO3D, YCBInEOAT, and BEHAVE datasets, demonstrating that our method significantly outperforms existing approaches.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-<!--     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
- -->    
-    <!--/ Paper video. -->
-  </div>
-</section>
 
 
 
