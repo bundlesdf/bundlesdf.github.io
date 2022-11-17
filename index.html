@@ -10,21 +10,21 @@
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
-<!--   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
- -->
+
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -119,60 +119,22 @@ We present a real-time method for 6-DoF tracking of an unknown object from a mon
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-<!--     <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/1MTjReoYAFg"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
- -->    
+    
     <!--/ Paper video. -->
   </div>
 </section>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <span class="link-block">
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="https://i.imgur.com/CrL5C4A.mp4"
-                type="video/mp4">
-          </video>
-        </span>
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <h2 class="title is-3">Behave Results</h2>
-      </div>
-      <div class="columns is-centered">
-        <span class="link-block">  
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="https://i.imgur.com/VAuQ8k5.mp4"
-                type="video/mp4">
-          </video>
-        </span>
-        <span class="link-block">
-          <video id="teaser" autoplay muted loop playsinline height="100%">
-            <source src="https://i.imgur.com/tsO9CHX.mp4"
-                type="video/mp4">
-          </video>
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- <section class="hero">
   <div class="hero-body">
@@ -209,113 +171,136 @@ model-viewer {
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
+      <div class='title is-3'>Interactive Results</div>
+      <div class='title is-4 has-text-centered'>Dataset</div>
+
       <div class="columns">
         <div class="column has-text-centered">
-          <span id="1_gt" class="button is-info is-rounded">
-            Ground Truth
+          <span id="ap13" class="button is-info is-rounded">
+            AP13
           </span>
-          <span id="1_ours" class="button is-normal is-rounded">
-            Ours
+          <span id="sm1" class="button is-normal is-rounded">
+            SM1
           </span>
-          <span id="1_bundletrack" class="button is-normal is-rounded">
-            BundleTrack
+          <span id="bechair" class="button is-normal is-rounded">
+            BEHAVE Chair
           </span>
-          <span id="1_droid" class="button is-normal is-rounded">
-            DROID
+          <span id="betable" class="button is-normal is-rounded">
+            BEHAVE Table
           </span>
-          <span id="1_sdf" class="button is-normal is-rounded">
-            SDF2SDF
-          </span>
-          <span id="1_nice" class="button is-normal is-rounded">
-            NICESLAM
-          </span>
-          <span id="1_kinect" class="button is-normal is-rounded">
-            KinectFusion
+          <span id="mustard" class="button is-normal is-rounded">
+            Mustard vid.
           </span>
         </div>
       </div>
-      <div class="columns">
-        <div class="column is-centered">
-          <span class="link-block">
-            <video id="v1" style="max-height: 300px;" autoplay muted loop controls playsinline height="100%">
-              <source src="https://i.imgur.com/yY0myqN.mp4"
-                  type="video/mp4">
-            </video>
-          </span>
+
+      <div class='title is-4'>Method 1</div>
+      <div class="has-text-centered">
+        <div class="columns">
+          <div class="column has-text-centered ">
+            <span id="1_gt" class="button is-info is-rounded">
+              Ground Truth
+            </span>
+            <span id="1_ours" class="button is-normal is-rounded">
+              Ours
+            </span>
+            <span id="1_bundletrack" class="button is-normal is-rounded">
+              BundleTrack
+            </span>
+            <span id="1_droid" class="button is-normal is-rounded">
+              DROID
+            </span>
+            <span id="1_sdf" class="button is-normal is-rounded">
+              SDF2SDF
+            </span>
+            <span id="1_nice" class="button is-normal is-rounded">
+              NICESLAM
+            </span>
+            <span id="1_kinect" class="button is-normal is-rounded">
+              KinectFusion
+            </span>
+          </div>
         </div>
-        <div class="column is-centered">
-          <span>
-            <model-viewer id="m1" alt="chair" 
-            src="static/models/AP13/AP13_gt.glb" 
-            shadow-intensity="1" 
-            ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg" 
-            camera-controls touch-action="pan-y"
-            >
-            </model-viewer>
-          </span>
+        <div class="columns is-vcentered">
+          <div class="column is-centered">
+            <span class="link-block">
+              <video id="v1" style="max-height: 300px;" autoplay muted loop controls playsinline height="100%">
+                <source src="https://i.imgur.com/yY0myqN.mp4"
+                    type="video/mp4">
+              </video>
+            </span>
+          </div>
+          <div class="column is-centered">
+            <span>
+              <model-viewer id="m1" alt="chair" 
+              src="static/models/AP13/AP13_gt.glb" 
+              shadow-intensity="1" 
+              ar environment-image="static/models/thatch_chapel_2k.hdr"
+              auto-rotate rotation-per-second="40deg" 
+              camera-controls touch-action="pan-y"
+              >
+              </model-viewer>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column has-text-centered">
-          <span id="2_gt" class="button is-normal is-rounded">
-            Ground Truth
-          </span>
-          <span id="2_ours" class="button is-info is-rounded">
-            Ours
-          </span>
-          <span id="2_bundletrack" class="button is-normal is-rounded">
-            BundleTrack
-          </span>
-          <span id="2_droid" class="button is-normal is-rounded">
-            DROID
-          </span>
-          <span id="2_sdf" class="button is-normal is-rounded">
-            SDF2SDF
-          </span>
-          <span id="2_nice" class="button is-normal is-rounded">
-            NICESLAM
-          </span>
-          <span id="2_kinect" class="button is-normal is-rounded">
-            KinectFusion
-          </span>
+      <br>
+      <div class='title is-4'>Method 2</div>
+      <div class="has-text-centered">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <span id="2_gt" class="button is-normal is-rounded">
+              Ground Truth
+            </span>
+            <span id="2_ours" class="button is-info is-rounded">
+              Ours
+            </span>
+            <span id="2_bundletrack" class="button is-normal is-rounded">
+              BundleTrack
+            </span>
+            <span id="2_droid" class="button is-normal is-rounded">
+              DROID
+            </span>
+            <span id="2_sdf" class="button is-normal is-rounded">
+              SDF2SDF
+            </span>
+            <span id="2_nice" class="button is-normal is-rounded">
+              NICESLAM
+            </span>
+            <span id="2_kinect" class="button is-normal is-rounded">
+              KinectFusion
+            </span>
+          </div>
         </div>
-      </div>
-      <div class='columns'>      
-        <div class="column is-centered">
-          <span>
-            <video style="max-height: 300px;" id="v2" autoplay muted loop playsinline height="100%">
-              <source src="https://i.imgur.com/JtkzjxE.mp4"
-                  type="video/mp4">
-            </video>
-          </span>
-        </div>
-        <div class="column is-centered">
-          <span>
-            <model-viewer id='m2' alt="chair" 
-            src="static/models/AP13/AP13_ours.glb" 
-            shadow-intensity="1" 
-            ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg" 
-            camera-controls touch-action="pan-y"
-            >
-            </model-viewer>
-          </span>
+        <div class='columns is-vcentered'>      
+          <div class="column is-centered">
+            <span>
+              <video style="max-height: 300px;" id="v2" autoplay muted loop playsinline height="100%">
+                <source src="https://i.imgur.com/JtkzjxE.mp4"
+                    type="video/mp4">
+              </video>
+            </span>
+          </div>
+          <div class="column is-centered">
+            <span>
+              <model-viewer id='m2' alt="chair" 
+              src="static/models/AP13/AP13_ours.glb" 
+              shadow-intensity="1" 
+              ar environment-image="static/models/thatch_chapel_2k.hdr"
+              auto-rotate rotation-per-second="40deg" 
+              camera-controls touch-action="pan-y"
+              >
+              </model-viewer>
+            </span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-AP13_bundletrack_smoothed.glb
-AP13_droid_smoothed.glb
-AP13_kinectfusion_smoothed.glb
-AP13_nice_slam_smoothed.glb
-AP13_ours_smoothed.glb
-AP13_sdf2sdf_smoothed.glb
-
 <script>
-  var data = {
+  var data_ap13 = {
     "gt":{
       "video":"https://i.imgur.com/yY0myqN.mp4",
       "model":"static/models/AP13/AP13_gt.glb"
@@ -345,7 +330,128 @@ AP13_sdf2sdf_smoothed.glb
       "model":"static/models/AP13/AP13_kinectfusion_smoothed.glb"
     },
   }
+  var data_bechair = {
+    "gt":{
+      "video":"https://i.imgur.com/mVlaaMJ.mp4",
+      "model":"static/models/bechair/gt.glb"
+    },
+    "ours":{
+      "video":"https://i.imgur.com/wrfJii7.mp4",
+      "model":"static/models/bechair/ours_smoothed.glb"
+    },
+    "nice":{
+      "video":"https://i.imgur.com/3e4BWZv.mp4",
+      "model":"static/models/bechair/nice_slam_smoothed.glb"
+    },
+    "bundletrack":{
+      "video":"https://i.imgur.com/qApkCnT.mp4",
+      "model":"static/models/bechair/bundletrack_smoothed.glb"
+    },
+    "droid":{
+      "video":"https://i.imgur.com/eXfkoG0.mp4",
+      "model":"static/models/bechair/droid_smoothed.glb"
+    },
+    "sdf":{
+      "video":"https://i.imgur.com/skH4FnF.mp4",
+      "model":"static/models/bechair/sdf2sdf_smoothed.glb"
+    },
+    "kinect":{
+      "video":"https://i.imgur.com/OLPiGdv.mp4",
+      "model":"static/models/bechair/kinectfusion_smoothed.glb"
+    },
+  }
+  var data_betable = {
+    "gt":{
+      "video":"https://i.imgur.com/YwW4BgA.mp4",
+      "model":"static/models/betable/gt.glb"
+    },
+    "ours":{
+      "video":"https://i.imgur.com/j16P9Qm.mp4",
+      "model":"static/models/betable/ours.glb"
+    },
+    "nice":{
+      "video":"https://i.imgur.com/Jo53rx2.mp4",
+      "model":"static/models/betable/nice_slam.glb"
+    },
+    "bundletrack":{
+      "video":"https://i.imgur.com/c5tRxlK.mp4",
+      "model":"static/models/betable/bundletrack.glb"
+    },
+    "droid":{
+      "video":"https://i.imgur.com/vlaLgbB.mp4",
+      "model":"static/models/betable/droid.glb"
+    },
+    "sdf":{
+      "video":"https://i.imgur.com/4YHXF5h.mp4",
+      "model":"static/models/betable/sdf2sdf.glb"
+    },
+    "kinect":{
+      "video":"https://i.imgur.com/OLPiGdv.mp4",
+      "model":"static/models/betable/kinectfusion_smoothed.glb"
+    },
+  }
+  var data_mustard = {
+    "gt":{
+      "video":"https://i.imgur.com/fc3dstr.mp4",
+      "model":"static/models/mustard/gt.glb"
+    },
+    "ours":{
+      "video":"https://i.imgur.com/Gj7xhYV.mp4",
+      "model":"static/models/mustard/ours_smoothed.glb"
+    },
+    "nice":{
+      "video":"https://i.imgur.com/Eyh72qh.mp4",
+      "model":"static/models/mustard/nice_slam_smoothed.glb"
+    },
+    "bundletrack":{ 
+      "video":"https://i.imgur.com/a21uzSG.mp4",
+      "model":"static/models/mustard/bundletrack_smoothed.glb"
+    },
+    "droid":{
+      "video":"https://i.imgur.com/yP7TXyc.mp4",
+      "model":"static/models/mustard/droid_smoothed.glb"
+    },
+    "sdf":{
+      "video":"https://i.imgur.com/T1muS4v.mp4",
+      "model":"static/models/mustard/sdf2sdf_smoothed.glb"
+    },
+    "kinect":{
+      "video":"https://i.imgur.com/OLPiGdv.mp4",
+      "model":"static/models/mustard/kinectfusion_smoothed.glb"
+    },
+  }
+  var data_sm1 = {
+    "gt":{
+      "video":"https://i.imgur.com/fc3dstr.mp4",
+      "model":"static/models/sm1/gt.glb"
+    },
+    "ours":{
+      "video":"https://i.imgur.com/Gj7xhYV.mp4",
+      "model":"static/models/sm1/ours_smoothed.glb"
+    },
+    "nice":{
+      "video":"https://i.imgur.com/Eyh72qh.mp4",
+      "model":"static/models/sm1/nice_slam_smoothed.glb"
+    },
+    "bundletrack":{ 
+      "video":"https://i.imgur.com/a21uzSG.mp4",
+      "model":"static/models/sm1/bundletrack_smoothed.glb"
+    },
+    "droid":{
+      "video":"https://i.imgur.com/yP7TXyc.mp4",
+      "model":"static/models/sm1/droid_smoothed.glb"
+    },
+    "sdf":{
+      "video":"https://i.imgur.com/T1muS4v.mp4",
+      "model":"static/models/sm1/sdf2sdf_smoothed.glb"
+    },
+    "kinect":{
+      "video":"https://i.imgur.com/OLPiGdv.mp4",
+      "model":"static/models/sm1/kinectfusion_smoothed.glb"
+    },
+  }
 
+  data = data_ap13;
   function sync1to2video() {    
     document.getElementById('v1').currentTime = 0;
     document.getElementById('v2').currentTime = 0;
@@ -357,8 +463,71 @@ AP13_sdf2sdf_smoothed.glb
   m1 = document.getElementById("m1")
   m2 = document.getElementById("m2")
 
+
+  method1 = 'gt';
+  method2 = 'ours';
+
+  function update_buttons()
+  { 
+    document.getElementById('ap13').className = 'button is-normal is-rounded';    
+    document.getElementById('sm1').className = 'button is-normal is-rounded';    
+    document.getElementById('bechair').className = 'button is-normal is-rounded';    
+    document.getElementById('betable').className = 'button is-normal is-rounded';    
+    document.getElementById('mustard').className = 'button is-normal is-rounded';
+    
+    v1.setAttribute('src', data[method1]['video']); 
+    m1.setAttribute('src', data[method1]['model']);
+
+    v2.setAttribute('src', data[method2]['video']); 
+    m2.setAttribute('src', data[method2]['model']);
+
+  }
+  // DATA LOADING
+  btn_ap13 = document.getElementById('ap13');
+  btn_ap13.addEventListener('click', function onClick() {
+    data = data_ap13;
+    update_buttons();
+    btn_ap13.className = 'button is-info is-rounded';
+    // set the video 
+    
+
+  });
+
+  btn_sm1 = document.getElementById('sm1');
+  btn_sm1.addEventListener('click', function onClick() {
+    data = data_sm1;
+    update_buttons();
+    btn_sm1.className = 'button is-info is-rounded';
+    // set the video 
+  });
+
+  btn_bechair = document.getElementById('bechair');
+  btn_bechair.addEventListener('click', function onClick() {
+    data = data_bechair;
+    update_buttons();
+    btn_bechair.className = 'button is-info is-rounded';
+    // set the video 
+  });
+
+  btn_betable = document.getElementById('betable');
+  btn_betable.addEventListener('click', function onClick() {
+    data=data_betable;
+    update_buttons();
+    btn_betable.className = 'button is-info is-rounded';
+    // set the video 
+  });
+
+  btn_mustard = document.getElementById('mustard');
+  btn_mustard.addEventListener('click', function onClick() {
+    data = data_mustard;
+    update_buttons();
+    btn_mustard.className = 'button is-info is-rounded';
+    // set the video 
+  });
+
+
+
   btn_1gt = document.getElementById('1_gt');
-  console.log(btn_1gt)
   btn_1gt.addEventListener('click', function onClick() {
     
     btn_1gt.className = 'button is-info is-rounded';
@@ -371,7 +540,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
     // set the video 
     v1.setAttribute('src', data['gt']['video']); 
-    m1.setAttribute('src', data['gt']['model'])
+    m1.setAttribute('src', data['gt']['model']);
+    method1 = "gt";
     sync1to2video();
   });
 
@@ -388,7 +558,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['ours']['video']); 
-    m1.setAttribute('src', data['ours']['model'])
+    m1.setAttribute('src', data['ours']['model']);
+    method1 = "ours";
     sync1to2video();
 
   });
@@ -406,7 +577,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['nice']['video']); 
-    m1.setAttribute('src', data['nice']['model'])
+    m1.setAttribute('src', data['nice']['model']);
+    method1 = "nice";
     sync1to2video();
 
   });
@@ -424,7 +596,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['bundletrack']['video']); 
-    m1.setAttribute('src', data['bundletrack']['model'])
+    m1.setAttribute('src', data['bundletrack']['model']);
+    method1 = "bundletrack";
     sync1to2video();
 
   });
@@ -442,7 +615,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['droid']['video']); 
-    m1.setAttribute('src', data['droid']['model'])
+    m1.setAttribute('src', data['droid']['model']);
+    method1 = "droid";
     sync1to2video();
 
   });
@@ -460,7 +634,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['sdf']['video']); 
-    m1.setAttribute('src', data['sdf']['model'])
+    m1.setAttribute('src', data['sdf']['model']);
+    method1 = "sdf";
     sync1to2video();
 
   });
@@ -478,7 +653,8 @@ AP13_sdf2sdf_smoothed.glb
     // document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
     v1.setAttribute('src', data['kinect']['video']); 
-    m1.setAttribute('src', data['kinect']['model'])
+    m1.setAttribute('src', data['kinect']['model']);
+    method1 = "kinect";
     sync1to2video();
 
   });
@@ -500,7 +676,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['gt']['video']); 
-    m2.setAttribute('src', data['gt']['model'])
+    m2.setAttribute('src', data['gt']['model']);
+    method2 = "gt";
     sync1to2video();
 
   });
@@ -518,7 +695,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['ours']['video']); 
-    m2.setAttribute('src', data['ours']['model'])
+    m2.setAttribute('src', data['ours']['model']);
+    method2 = "ours";
     sync1to2video();
 
   });
@@ -536,7 +714,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['nice']['video']); 
-    m2.setAttribute('src', data['nice']['model'])
+    m2.setAttribute('src', data['nice']['model']);
+    method2 = "nice";
     sync1to2video();
 
   });
@@ -554,7 +733,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['bundletrack']['video']); 
-    m2.setAttribute('src', data['bundletrack']['model'])
+    m2.setAttribute('src', data['bundletrack']['model']);
+    method2 = "bundletrack";
     sync1to2video();
 
   });
@@ -572,7 +752,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['droid']['video']); 
-    m2.setAttribute('src', data['droid']['model'])
+    m2.setAttribute('src', data['droid']['model']);
+    method2 = "droid";
     sync1to2video();
 
   });
@@ -590,7 +771,8 @@ AP13_sdf2sdf_smoothed.glb
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['sdf']['video']); 
-    m2.setAttribute('src', data['sdf']['model'])
+    m2.setAttribute('src', data['sdf']['model']);
+    method2 = "sdf";
     sync1to2video();
 
   });
@@ -608,8 +790,9 @@ AP13_sdf2sdf_smoothed.glb
     // document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
     v2.setAttribute('src', data['kinect']['video']); 
-    m2.setAttribute('src', data['kinect']['model'])
-
+    m2.setAttribute('src', data['kinect']['model']);
+    method2 = "kinect";
+    sync1to2video();
   });
 
 
