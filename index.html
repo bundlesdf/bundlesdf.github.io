@@ -305,7 +305,8 @@ model-viewer {
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class='title is-3'>Our Method in the Wild (iphone)</div>
+      <div class='title is-3'>Our Method in the Wild</div>
+      <div class='title is-5'>iPhone</div>
        <div class='columns is-vcentered'>      
         <div class="column is-centered has-text-centered">
           <span style="text-align:center;">
@@ -349,9 +350,57 @@ model-viewer {
           <!-- final 3d model -->
         </div>
       </div>
+
+      <div class='title is-5'>realsense</div>
+       <div class='columns is-vcentered'>      
+        <div class="column is-centered has-text-centered">
+          <span style="text-align:center;">
+            <video style="text-align:center; max-height: 150px;" id="v3" autoplay muted loop playsinline controls height="100%">
+              <source src="https://imgur.com/OCa4cTn.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <span>
+            <video style="max-height: 150px;" id="v4" autoplay muted loop playsinline height="100%">
+              <source src="https://imgur.com/w4W1GYu.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+
+        <div class="column is-centered has-text-centered">
+          <span class="has-text-centered">
+            <model-viewer style="max-width: 200px; max-height: 150px;" id='m3' alt="chair" 
+            src="static/models/milk.glb" 
+            shadow-intensity="1" 
+            ar environment-image="static/models/thatch_chapel_2k.hdr"
+            auto-rotate rotation-per-second="40deg" 
+            camera-controls touch-action="pan-y"
+            >
+            </model-viewer>
+          </span>
+
+        </div>
+      </div>
+      <div class='columns is-vcentered'>      
+        <div class="column is-centered">
+          <p style="text-align: center">realsense tracking</p>
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          live reconstruction
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          <!-- final 3d model -->
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
+
+
 
 <script>
   var data_ap13 = {
