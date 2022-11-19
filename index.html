@@ -301,6 +301,58 @@ model-viewer {
   </div>
 </section>
 
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class='title is-3'>Our Method in the Wild (iphone)</div>
+       <div class='columns is-vcentered'>      
+        <div class="column is-centered has-text-centered">
+          <span style="text-align:center;">
+            <video style="text-align:center; max-height: 150px;" id="v3" autoplay muted loop playsinline height="100%">
+              <source src="https://imgur.com/gkXdbKS.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <span>
+            <video style="max-height: 150px;" id="v4" autoplay muted loop playsinline height="100%">
+              <source src="https://imgur.com/SmGEiQC.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+
+        <div class="column is-centered has-text-centered">
+          <span class="has-text-centered">
+            <model-viewer style="max-width: 200px; max-height: 150px;" id='m3' alt="chair" 
+            src="static/models/pumpkin.glb" 
+            shadow-intensity="1" 
+            ar environment-image="static/models/thatch_chapel_2k.hdr"
+            auto-rotate rotation-per-second="40deg" 
+            camera-controls touch-action="pan-y"
+            >
+            </model-viewer>
+          </span>
+
+        </div>
+      </div>
+      <div class='columns is-vcentered'>      
+        <div class="column is-centered">
+          <p style="text-align: center">iPhone tracking</p>
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          live reconstruction
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          <!-- final 3d model -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
   var data_ap13 = {
     "gt":{
@@ -424,31 +476,31 @@ model-viewer {
   }
   var data_sm1 = {
     "gt":{
-      "video":"https://i.imgur.com/fc3dstr.mp4",
+      "video":"https://i.imgur.com/UNGUkEl.mp4",
       "model":"static/models/sm1/gt.glb"
     },
     "ours":{
-      "video":"https://i.imgur.com/Gj7xhYV.mp4",
+      "video":"https://i.imgur.com/cFos4Fq.mp4",
       "model":"static/models/sm1/ours_smoothed.glb"
     },
     "nice":{
-      "video":"https://i.imgur.com/Eyh72qh.mp4",
+      "video":"https://i.imgur.com/KwkC5KN.mp4",
       "model":"static/models/sm1/nice_slam_smoothed.glb"
     },
     "bundletrack":{ 
-      "video":"https://i.imgur.com/a21uzSG.mp4",
+      "video":"https://i.imgur.com/y2CrSZg.mp4",
       "model":"static/models/sm1/bundletrack_smoothed.glb"
     },
     "droid":{
-      "video":"https://i.imgur.com/yP7TXyc.mp4",
+      "video":"https://i.imgur.com/YQyNFkf.mp4",
       "model":"static/models/sm1/droid_smoothed.glb"
     },
     "sdf":{
-      "video":"https://i.imgur.com/T1muS4v.mp4",
+      "video":"https://i.imgur.com/wEs8gzc.mp4",
       "model":"static/models/sm1/sdf2sdf_smoothed.glb"
     },
     "kinect":{
-      "video":"https://i.imgur.com/OLPiGdv.mp4",
+      "video":"https://i.imgur.com/p90r5Oi.mp4",
       "model":"static/models/sm1/kinectfusion_smoothed.glb"
     },
   }
