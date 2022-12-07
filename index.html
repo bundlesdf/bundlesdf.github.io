@@ -72,16 +72,15 @@
                 </a>
               </span>
               <!-- Code Link. -->
-<!--               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+              <span class="link-block">
+                <a href="https://neural-object-tracking.github.io/" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
- -->              <!-- Dataset Link. -->
+              <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -158,12 +157,12 @@ We present a real-time method for 6-DoF tracking of an unknown object from a mon
   </div>
 </section> -->
 
-<style>
+<!-- <style>
 model-viewer {
   width: 400px;
   height: 300px;
 }
-</style>
+</style> -->
 
 
 
@@ -307,68 +306,54 @@ model-viewer {
     <div class="container is-max-desktop">
       <div class='title is-3'>Our Method in the Wild</div>
       <div class='title is-5'>Pumpkin doll (captured by iPhone)</div>
-       <div class='columns is-vcentered'>
+      <div class='columns is-vcentered'>
         <div class="column is-centered has-text-centered">
-          <span style="text-align:center;">
-            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
-              <source src="static/videos/pumpkin_track_recon_synced_crop.mp4"
-                  type="video/mp4">
+          <span style="float:left;">
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls
+              height="100%">
+              <source src="static/videos/pumpkin_track_recon_synced_crop.mp4" type="video/mp4">
             </video>
           </span>
+          <div class="column is-centered">
+            <p style="text-align: center">Tracking and reconstruction over time</p>
+          </div>
         </div>
         <div class="column is-centered has-text-centered">
-          <span class="has-text-centered">
-            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
-            src="static/models/pumpkin.glb"
-            shadow-intensity="1"
-            ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg"
-            camera-controls touch-action="pan-y"
-            >
+          <span class="has-text-centered"">
+            <model-viewer style=" max-height: 400px; text-align: center" id='m3' alt="chair" src="static/models/pumpkin.glb"
+            shadow-intensity="1" ar environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg"
+            camera-controls touch-action="pan-y">
             </model-viewer>
+            <div style="text-align: center" class="column is-centered">
+              Final reconstruction (interactable)
+            </div>
           </span>
-
-        </div>
-      </div>
-      <div class='columns is-vcentered'>
-        <div class="column is-centered">
-          <p style="text-align: center">Tracking and reconstruction over time</p>
-        </div>
-        <div style="text-align: center"class="column is-centered">
-          Final reconstruction (interactable)
         </div>
       </div>
 
       <div class='title is-5'>Milk jug (captured by Intel RealSense)</div>
-       <div class='columns is-vcentered'>
+      <div class='columns is-vcentered'>
         <div class="column is-centered has-text-centered">
           <span style="text-align:center;">
-            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
-              <source src="static/videos/milk_grow_track_synced_cropped.mp4"
-                  type="video/mp4">
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls
+              height="100%">
+              <source src="static/videos/milk_grow_track_synced_cropped.mp4" type="video/mp4">
             </video>
           </span>
+          <div class="column is-centered">
+            <p style="text-align: center">Tracking and reconstruction over time</p>
+          </div>
         </div>
         <div class="column is-centered has-text-centered">
           <span class="has-text-centered">
-            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
-            src="static/models/milk.glb"
-            shadow-intensity="1"
-            ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg"
-            camera-controls touch-action="pan-y"
-            >
+            <model-viewer style="max-height: 400px; text-align: center" id='m3' alt="chair" src="static/models/milk.glb" shadow-intensity="1" ar
+              environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg" camera-controls
+              touch-action="pan-y" camera-orbit="45deg 55deg 0m">
             </model-viewer>
           </span>
-
-        </div>
-      </div>
-      <div class='columns is-vcentered'>
-        <div class="column is-centered">
-          <p style="text-align: center">Tracking and reconstruction over time</p>
-        </div>
-        <div style="text-align: center"class="column is-centered">
-          Final reconstruction (interactable)
+          <div style="text-align: center" class="column is-centered">
+            Final reconstruction (interactable)
+          </div>
         </div>
       </div>
 
