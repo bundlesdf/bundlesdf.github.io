@@ -21,7 +21,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -128,7 +128,7 @@ We present a real-time method for 6-DoF tracking of an unknown object from a mon
         </div>
       </div>
     </div>
-    
+
     <!--/ Paper video. -->
   </div>
 </section>
@@ -141,14 +141,14 @@ We present a real-time method for 6-DoF tracking of an unknown object from a mon
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <h2 class="title is-3">3D models</h2>
-      </div>        
+      </div>
       <div class="columns is-centered">
         <span>
-          <model-viewer alt="chair" 
-          src="static/models/AP13/AP13.glb" 
-          shadow-intensity="1" 
+          <model-viewer alt="chair"
+          src="static/models/AP13/AP13.glb"
+          shadow-intensity="1"
           ar environment-image="static/models/thatch_chapel_2k.hdr"
-          auto-rotate rotation-per-second="40deg" 
+          auto-rotate rotation-per-second="40deg"
           camera-controls touch-action="pan-y"
           >
           </model-viewer>
@@ -232,11 +232,11 @@ model-viewer {
           </div>
           <div class="column is-centered">
             <span>
-              <model-viewer id="m1" alt="chair" 
-              src="static/models/AP13/AP13_gt.glb" 
-              shadow-intensity="1" 
+              <model-viewer id="m1" alt="chair"
+              src="static/models/AP13/AP13_gt.glb"
+              shadow-intensity="1"
               ar environment-image="static/models/thatch_chapel_2k.hdr"
-              auto-rotate rotation-per-second="40deg" 
+              auto-rotate rotation-per-second="40deg"
               camera-controls touch-action="pan-y"
               >
               </model-viewer>
@@ -272,7 +272,7 @@ model-viewer {
             </span>
           </div>
         </div>
-        <div class='columns is-vcentered'>      
+        <div class='columns is-vcentered'>
           <div class="column is-centered">
             <span>
               <video style="max-height: 300px;" id="v2" autoplay muted loop playsinline height="100%">
@@ -280,16 +280,16 @@ model-viewer {
                     type="video/mp4">
               </video>
               <br>
-              <p>automatically synchronized with video above</p>
+              <p>(control the upper video to synchronize)</p>
             </span>
           </div>
           <div class="column is-centered">
             <span>
-              <model-viewer id='m2' alt="chair" 
-              src="static/models/AP13/AP13_ours.glb" 
-              shadow-intensity="1" 
+              <model-viewer id='m2' alt="chair"
+              src="static/models/AP13/AP13_ours.glb"
+              shadow-intensity="1"
               ar environment-image="static/models/thatch_chapel_2k.hdr"
-              auto-rotate rotation-per-second="40deg" 
+              auto-rotate rotation-per-second="40deg"
               camera-controls touch-action="pan-y"
               >
               </model-viewer>
@@ -306,32 +306,23 @@ model-viewer {
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class='title is-3'>Our Method in the Wild</div>
-      <div class='title is-5'>iPhone</div>
-       <div class='columns is-vcentered'>      
+      <div class='title is-5'>Pumpkin doll (captured by iPhone)</div>
+       <div class='columns is-vcentered'>
         <div class="column is-centered has-text-centered">
           <span style="text-align:center;">
-            <video style="text-align:center; max-height: 150px;" id="v3" autoplay muted loop playsinline controls height="100%">
-              <source src="https://imgur.com/gkXdbKS.mp4"
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
+              <source src="static/videos/pumpkin_track_recon_synced_crop.mp4"
                   type="video/mp4">
             </video>
           </span>
         </div>
-        <div class="column is-centered has-text-centered">
-          <span>
-            <video style="max-height: 150px;" id="v4" autoplay muted loop playsinline height="100%">
-              <source src="https://imgur.com/SmGEiQC.mp4"
-                  type="video/mp4">
-            </video>
-          </span>
-        </div>
-
         <div class="column is-centered has-text-centered">
           <span class="has-text-centered">
-            <model-viewer style="max-width: 200px; max-height: 150px;" id='m3' alt="chair" 
-            src="static/models/pumpkin.glb" 
-            shadow-intensity="1" 
+            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
+            src="static/models/pumpkin.glb"
+            shadow-intensity="1"
             ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg" 
+            auto-rotate rotation-per-second="40deg"
             camera-controls touch-action="pan-y"
             >
             </model-viewer>
@@ -339,44 +330,32 @@ model-viewer {
 
         </div>
       </div>
-      <div class='columns is-vcentered'>      
+      <div class='columns is-vcentered'>
         <div class="column is-centered">
-          <p style="text-align: center">iPhone tracking</p>
+          <p style="text-align: center">Tracking and reconstruction over time</p>
         </div>
         <div style="text-align: center"class="column is-centered">
-          live reconstruction
-        </div>
-        <div style="text-align: center"class="column is-centered">
-          <!-- final 3d model -->
+          Final reconstruction (interactable)
         </div>
       </div>
 
-      <div class='title is-5'>realsense</div>
-       <div class='columns is-vcentered'>      
+      <div class='title is-5'>Milk jug (captured by Intel RealSense)</div>
+       <div class='columns is-vcentered'>
         <div class="column is-centered has-text-centered">
           <span style="text-align:center;">
-            <video style="text-align:center; max-height: 150px;" id="v3" autoplay muted loop playsinline controls height="100%">
-              <source src="https://imgur.com/OCa4cTn.mp4"
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
+              <source src="static/videos/milk_grow_track_synced_cropped.mp4"
                   type="video/mp4">
             </video>
           </span>
         </div>
-        <div class="column is-centered has-text-centered">
-          <span>
-            <video style="max-height: 150px;" id="v4" autoplay muted loop playsinline height="100%">
-              <source src="https://imgur.com/w4W1GYu.mp4"
-                  type="video/mp4">
-            </video>
-          </span>
-        </div>
-
         <div class="column is-centered has-text-centered">
           <span class="has-text-centered">
-            <model-viewer style="max-width: 200px; max-height: 150px;" id='m3' alt="chair" 
-            src="static/models/milk.glb" 
-            shadow-intensity="1" 
+            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
+            src="static/models/milk.glb"
+            shadow-intensity="1"
             ar environment-image="static/models/thatch_chapel_2k.hdr"
-            auto-rotate rotation-per-second="40deg" 
+            auto-rotate rotation-per-second="40deg"
             camera-controls touch-action="pan-y"
             >
             </model-viewer>
@@ -384,18 +363,15 @@ model-viewer {
 
         </div>
       </div>
-      <div class='columns is-vcentered'>      
+      <div class='columns is-vcentered'>
         <div class="column is-centered">
-          <p style="text-align: center">realsense tracking</p>
+          <p style="text-align: center">Tracking and reconstruction over time</p>
         </div>
         <div style="text-align: center"class="column is-centered">
-          live reconstruction
-        </div>
-        <div style="text-align: center"class="column is-centered">
-          <!-- final 3d model -->
+          Final reconstruction (interactable)
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -506,7 +482,7 @@ model-viewer {
       "video":"https://i.imgur.com/Eyh72qh.mp4",
       "model":"static/models/mustard/nice_slam_smoothed.glb"
     },
-    "bundletrack":{ 
+    "bundletrack":{
       "video":"https://i.imgur.com/a21uzSG.mp4",
       "model":"static/models/mustard/bundletrack_smoothed.glb"
     },
@@ -536,7 +512,7 @@ model-viewer {
       "video":"https://i.imgur.com/KwkC5KN.mp4",
       "model":"static/models/sm1/nice_slam_smoothed.glb"
     },
-    "bundletrack":{ 
+    "bundletrack":{
       "video":"https://i.imgur.com/y2CrSZg.mp4",
       "model":"static/models/sm1/bundletrack_smoothed.glb"
     },
@@ -555,7 +531,7 @@ model-viewer {
   }
 
   data = data_ap13;
-  function sync1to2video() {    
+  function sync1to2video() {
     document.getElementById('v1').currentTime = 0;
     document.getElementById('v2').currentTime = 0;
   }
@@ -571,17 +547,17 @@ model-viewer {
   method2 = 'ours';
 
   function update_buttons()
-  { 
-    document.getElementById('ap13').className = 'button is-normal is-rounded';    
-    document.getElementById('sm1').className = 'button is-normal is-rounded';    
-    document.getElementById('bechair').className = 'button is-normal is-rounded';    
-    document.getElementById('betable').className = 'button is-normal is-rounded';    
+  {
+    document.getElementById('ap13').className = 'button is-normal is-rounded';
+    document.getElementById('sm1').className = 'button is-normal is-rounded';
+    document.getElementById('bechair').className = 'button is-normal is-rounded';
+    document.getElementById('betable').className = 'button is-normal is-rounded';
     document.getElementById('mustard').className = 'button is-normal is-rounded';
-    
-    v1.setAttribute('src', data[method1]['video']); 
+
+    v1.setAttribute('src', data[method1]['video']);
     m1.setAttribute('src', data[method1]['model']);
 
-    v2.setAttribute('src', data[method2]['video']); 
+    v2.setAttribute('src', data[method2]['video']);
     m2.setAttribute('src', data[method2]['model']);
 
   }
@@ -591,8 +567,8 @@ model-viewer {
     data = data_ap13;
     update_buttons();
     btn_ap13.className = 'button is-info is-rounded';
-    // set the video 
-    
+    // set the video
+
 
   });
 
@@ -601,7 +577,7 @@ model-viewer {
     data = data_sm1;
     update_buttons();
     btn_sm1.className = 'button is-info is-rounded';
-    // set the video 
+    // set the video
   });
 
   btn_bechair = document.getElementById('bechair');
@@ -609,7 +585,7 @@ model-viewer {
     data = data_bechair;
     update_buttons();
     btn_bechair.className = 'button is-info is-rounded';
-    // set the video 
+    // set the video
   });
 
   btn_betable = document.getElementById('betable');
@@ -617,7 +593,7 @@ model-viewer {
     data=data_betable;
     update_buttons();
     btn_betable.className = 'button is-info is-rounded';
-    // set the video 
+    // set the video
   });
 
   btn_mustard = document.getElementById('mustard');
@@ -625,24 +601,24 @@ model-viewer {
     data = data_mustard;
     update_buttons();
     btn_mustard.className = 'button is-info is-rounded';
-    // set the video 
+    // set the video
   });
 
 
 
   btn_1gt = document.getElementById('1_gt');
   btn_1gt.addEventListener('click', function onClick() {
-    
+
     btn_1gt.className = 'button is-info is-rounded';
-    // document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
+    // document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
     document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
-    // set the video 
-    v1.setAttribute('src', data['gt']['video']); 
+    // set the video
+    v1.setAttribute('src', data['gt']['video']);
     m1.setAttribute('src', data['gt']['model']);
     method1 = "gt";
     sync1to2video();
@@ -650,17 +626,17 @@ model-viewer {
 
   btn_ours1 = document.getElementById('1_ours');
   btn_ours1.addEventListener('click', function onClick() {
-    
+
     btn_ours1.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    // document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    // document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['ours']['video']); 
+    v1.setAttribute('src', data['ours']['video']);
     m1.setAttribute('src', data['ours']['model']);
     method1 = "ours";
     sync1to2video();
@@ -669,17 +645,17 @@ model-viewer {
 
   btn_1nice = document.getElementById('1_nice');
   btn_1nice.addEventListener('click', function onClick() {
-    
+
     btn_1nice.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    // document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    // document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['nice']['video']); 
+    v1.setAttribute('src', data['nice']['video']);
     m1.setAttribute('src', data['nice']['model']);
     method1 = "nice";
     sync1to2video();
@@ -688,17 +664,17 @@ model-viewer {
 
   btn_1bundle = document.getElementById('1_bundletrack');
   btn_1bundle.addEventListener('click', function onClick() {
-    
+
     btn_1bundle.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    // document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    // document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['bundletrack']['video']); 
+    v1.setAttribute('src', data['bundletrack']['video']);
     m1.setAttribute('src', data['bundletrack']['model']);
     method1 = "bundletrack";
     sync1to2video();
@@ -707,17 +683,17 @@ model-viewer {
 
   btn_1droid = document.getElementById('1_droid');
   btn_1droid.addEventListener('click', function onClick() {
-    
+
     btn_1droid.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    // document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    // document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['droid']['video']); 
+    v1.setAttribute('src', data['droid']['video']);
     m1.setAttribute('src', data['droid']['model']);
     method1 = "droid";
     sync1to2video();
@@ -726,17 +702,17 @@ model-viewer {
 
   btn_1sdf = document.getElementById('1_sdf');
   btn_1sdf.addEventListener('click', function onClick() {
-    
+
     btn_1sdf.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    // document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    // document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('1_nice').className = 'button is-normal is-rounded';
     document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['sdf']['video']); 
+    v1.setAttribute('src', data['sdf']['video']);
     m1.setAttribute('src', data['sdf']['model']);
     method1 = "sdf";
     sync1to2video();
@@ -745,17 +721,17 @@ model-viewer {
 
   btn_1kinect = document.getElementById('1_kinect');
   btn_1kinect.addEventListener('click', function onClick() {
-    
+
     btn_1kinect.className = 'button is-info is-rounded';
-    document.getElementById('1_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('1_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('1_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('1_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('1_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('1_gt').className = 'button is-normal is-rounded';
+    document.getElementById('1_ours').className = 'button is-normal is-rounded';
+    document.getElementById('1_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('1_droid').className = 'button is-normal is-rounded';
+    document.getElementById('1_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('1_nice').className = 'button is-normal is-rounded';
     // document.getElementById('1_kinect').className = 'button is-normal is-rounded';
 
-    v1.setAttribute('src', data['kinect']['video']); 
+    v1.setAttribute('src', data['kinect']['video']);
     m1.setAttribute('src', data['kinect']['model']);
     method1 = "kinect";
     sync1to2video();
@@ -768,17 +744,17 @@ model-viewer {
   btn_2gt = document.getElementById('2_gt');
   console.log(btn_2gt)
   btn_2gt.addEventListener('click', function onClick() {
-    
+
     btn_2gt.className = 'button is-info is-rounded';
-    // document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    // document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['gt']['video']); 
+    v2.setAttribute('src', data['gt']['video']);
     m2.setAttribute('src', data['gt']['model']);
     method2 = "gt";
     sync1to2video();
@@ -787,17 +763,17 @@ model-viewer {
 
   btn_2ours = document.getElementById('2_ours');
   btn_2ours.addEventListener('click', function onClick() {
-    
+
     btn_2ours.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    // document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    // document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['ours']['video']); 
+    v2.setAttribute('src', data['ours']['video']);
     m2.setAttribute('src', data['ours']['model']);
     method2 = "ours";
     sync1to2video();
@@ -806,17 +782,17 @@ model-viewer {
 
   btn_2nice = document.getElementById('2_nice');
   btn_2nice.addEventListener('click', function onClick() {
-    
+
     btn_2nice.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    // document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    // document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['nice']['video']); 
+    v2.setAttribute('src', data['nice']['video']);
     m2.setAttribute('src', data['nice']['model']);
     method2 = "nice";
     sync1to2video();
@@ -825,17 +801,17 @@ model-viewer {
 
   btn_2bundle = document.getElementById('2_bundletrack');
   btn_2bundle.addEventListener('click', function onClick() {
-    
+
     btn_2bundle.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    // document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    // document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['bundletrack']['video']); 
+    v2.setAttribute('src', data['bundletrack']['video']);
     m2.setAttribute('src', data['bundletrack']['model']);
     method2 = "bundletrack";
     sync1to2video();
@@ -844,17 +820,17 @@ model-viewer {
 
   btn_2droid = document.getElementById('2_droid');
   btn_2droid.addEventListener('click', function onClick() {
-    
+
     btn_2droid.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    // document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    // document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['droid']['video']); 
+    v2.setAttribute('src', data['droid']['video']);
     m2.setAttribute('src', data['droid']['model']);
     method2 = "droid";
     sync1to2video();
@@ -863,17 +839,17 @@ model-viewer {
 
   btn_2sdf = document.getElementById('2_sdf');
   btn_2sdf.addEventListener('click', function onClick() {
-    
+
     btn_2sdf.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    // document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    // document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['sdf']['video']); 
+    v2.setAttribute('src', data['sdf']['video']);
     m2.setAttribute('src', data['sdf']['model']);
     method2 = "sdf";
     sync1to2video();
@@ -882,17 +858,17 @@ model-viewer {
 
   btn_2kinect = document.getElementById('2_kinect');
   btn_2kinect.addEventListener('click', function onClick() {
-    
+
     btn_2kinect.className = 'button is-info is-rounded';
-    document.getElementById('2_gt').className = 'button is-normal is-rounded';    
-    document.getElementById('2_ours').className = 'button is-normal is-rounded';    
-    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';    
-    document.getElementById('2_droid').className = 'button is-normal is-rounded';    
-    document.getElementById('2_sdf').className = 'button is-normal is-rounded';    
-    document.getElementById('2_nice').className = 'button is-normal is-rounded';    
+    document.getElementById('2_gt').className = 'button is-normal is-rounded';
+    document.getElementById('2_ours').className = 'button is-normal is-rounded';
+    document.getElementById('2_bundletrack').className = 'button is-normal is-rounded';
+    document.getElementById('2_droid').className = 'button is-normal is-rounded';
+    document.getElementById('2_sdf').className = 'button is-normal is-rounded';
+    document.getElementById('2_nice').className = 'button is-normal is-rounded';
     // document.getElementById('2_kinect').className = 'button is-normal is-rounded';
 
-    v2.setAttribute('src', data['kinect']['video']); 
+    v2.setAttribute('src', data['kinect']['video']);
     m2.setAttribute('src', data['kinect']['model']);
     method2 = "kinect";
     sync1to2video();
@@ -904,27 +880,27 @@ model-viewer {
 
 <script>
   // Original script to synchronize playback of two HTML5 video windows
-  // by Adam Pierce. 
+  // by Adam Pierce.
   // http://siliconsparrow.com/synchronize-two-video-replays-using-javascript/
-  // This script is public domain. You can copy, modify and share it as much 
+  // This script is public domain. You can copy, modify and share it as much
   // as you like.
 
   // sync 2nd (right) video to playing position of 1st (left) video
   window.onload = function(){
         var v1 = document.getElementById('v1');
-        
+
         v1.addEventListener("play", function() {
           document.getElementById('v2').play();
         });
-        
+
         v1.addEventListener("pause", function() {
           document.getElementById('v2').pause();
         });
-        
+
         v1.addEventListener("seeking", function() {
           document.getElementById('v2').currentTime = v1.currentTime;
         });
-        
+
         v1.addEventListener("seeked", function() {
           document.getElementById('v2').currentTime = v1.currentTime;
         });
@@ -932,22 +908,22 @@ model-viewer {
           document.getElementById('v2').currentTime = v1.currentTime;
         });
 
-  }  
+  }
   window.onload = function(){
         var v3 = document.getElementById('v3');
-        
+
         v3.addEventListener("play", function() {
           document.getElementById('v4').play();
         });
-        
+
         v3.addEventListener("pause", function() {
           document.getElementById('v4').pause();
         });
-        
+
         v3.addEventListener("seeking", function() {
           document.getElementById('v4').currentTime = v3.currentTime;
         });
-        
+
         v3.addEventListener("seeked", function() {
           document.getElementById('v4').currentTime = v3.currentTime;
         });
@@ -955,7 +931,7 @@ model-viewer {
           document.getElementById('v4').currentTime = v3.currentTime;
         });
 
-  }  
+  }
 </script>
 
 
@@ -965,8 +941,8 @@ model-viewer {
       <div class="column is-8">
         <div class="content">
           <p>
-            Website taken from 
-              <a href="https://github.com/nerfies/nerfies.github.io">here</a>. 
+            Website taken from
+              <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
           </p>
         </div>
       </div>
