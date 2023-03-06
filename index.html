@@ -21,7 +21,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -80,15 +79,16 @@
                 </a>
               </span>
               <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://neural-object-tracking.github.io/" class="external-link button is-normal is-rounded is-dark">
+<!--               <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+ -->              <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -165,12 +165,12 @@ We present a real-time method for 6-DoF tracking of an unknown object from a mon
   </div>
 </section> -->
 
-<!-- <style>
+<style>
 model-viewer {
   width: 400px;
   height: 300px;
 }
-</style> -->
+</style>
 
 
 
@@ -287,7 +287,7 @@ model-viewer {
                     type="video/mp4">
               </video>
               <br>
-              <p>(control the upper video to synchronize)</p>
+              <p>automatically synchronized with video above</p>
             </span>
           </div>
           <div class="column is-centered">
@@ -313,52 +313,71 @@ model-viewer {
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class='title is-3'>Our Method in the Wild</div>
-      <div class='title is-5'>Pumpkin doll (captured by iPhone&#x1F4F1)</div>
+      <div class='title is-5'>Pumpkin doll (captured by iPhone)</div>
+       <div class='columns is-vcentered'>
+        <div class="column is-centered has-text-centered">
+          <span style="text-align:center;">
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
+              <source src="static/videos/pumpkin_track_recon_synced_crop.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <span class="has-text-centered">
+            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
+            src="static/models/pumpkin.glb"
+            shadow-intensity="1"
+            ar environment-image="static/models/thatch_chapel_2k.hdr"
+            auto-rotate rotation-per-second="40deg"
+            camera-controls touch-action="pan-y"
+            >
+            </model-viewer>
+          </span>
 
-      <table style="margin: 0px 0px 50px 0px">
-        <tr>
-          <td style="padding:0 0px 0px 0; max-height:200px; text-align: center">
-            <div style="max-width: 500px">
-              <video id="v3" autoplay muted loop playsinline controls
-                height="100%">
-                <source src="static/videos/pumpkin_track_recon_synced_crop.mp4" type="video/mp4">
-              </video>
-              <p>Tracking and reconstruction over time</p>
-            </div>
-          </td>
-          <td style="padding:0 0px 0px 100px; max-height:200px; text-align: center">
-            <div style="max-width: 600px; height: 190px;">
-              <model-viewer style="text-align: center;" id='m3' alt="chair" src="static/models/pumpkin.glb" shadow-intensity="1" ar
-                environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg" camera-controls touch-action="pan-y">
-              </model-viewer>
-            </div>
-            <p>Final reconstruction (interactable)</p>
-          </td>
-        </tr>
-      </table>
+        </div>
+      </div>
+      <div class='columns is-vcentered'>
+        <div class="column is-centered">
+          <p style="text-align: center">Tracking and reconstruction over time</p>
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          Final reconstruction (interactable)
+        </div>
+      </div>
 
       <div class='title is-5'>Milk jug (captured by Intel RealSense)</div>
-      <table style="margin: 0px 0px 50px 0px">
-        <tr>
-          <td style="padding:0 0px 0px 0; max-height:200px; text-align: center">
-            <div style="max-width: 500px">
-              <video id="v3" autoplay muted loop playsinline controls
-                height="100%">
-                <source src="static/videos/milk_grow_track_synced_cropped.mp4" type="video/mp4">
-              </video>
-              <p>Tracking and reconstruction over time</p>
-            </div>
-          </td>
-          <td style="padding:0 0px 0px 100px; max-height:200px; text-align: center">
-            <div style="max-width: 600px; height: 190px;">
-              <model-viewer style="text-align: center;" id='m3' alt="chair" src="static/models/milk.glb" shadow-intensity="1" ar
-                environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg" camera-controls touch-action="pan-y">
-              </model-viewer>
-            </div>
-            <p>Final reconstruction (interactable)</p>
-          </td>
-        </tr>
-      </table>
+       <div class='columns is-vcentered'>
+        <div class="column is-centered has-text-centered">
+          <span style="text-align:center;">
+            <video style="text-align:center; max-height: 400px;" id="v3" autoplay muted loop playsinline controls height="100%">
+              <source src="static/videos/milk_grow_track_synced_cropped.mp4"
+                  type="video/mp4">
+            </video>
+          </span>
+        </div>
+        <div class="column is-centered has-text-centered">
+          <span class="has-text-centered">
+            <model-viewer style="max-height: 100px;" id='m3' alt="chair"
+            src="static/models/milk.glb"
+            shadow-intensity="1"
+            ar environment-image="static/models/thatch_chapel_2k.hdr"
+            auto-rotate rotation-per-second="40deg"
+            camera-controls touch-action="pan-y"
+            >
+            </model-viewer>
+          </span>
+
+        </div>
+      </div>
+      <div class='columns is-vcentered'>
+        <div class="column is-centered">
+          <p style="text-align: center">Tracking and reconstruction over time</p>
+        </div>
+        <div style="text-align: center"class="column is-centered">
+          Final reconstruction (interactable)
+        </div>
+      </div>
 
     </div>
   </div>
@@ -367,6 +386,7 @@ model-viewer {
 
 
 <script>
+
   var data_ap13 = {
     "gt":{
       "video":"https://i.imgur.com/yY0myqN.mp4",
@@ -862,12 +882,7 @@ model-viewer {
     sync1to2video();
   });
 
-
-</script>
-
-
-<script>
-  // Original script to synchronize playback of two HTML5 video windows
+// Original script to synchronize playback of two HTML5 video windows
   // by Adam Pierce.
   // http://siliconsparrow.com/synchronize-two-video-replays-using-javascript/
   // This script is public domain. You can copy, modify and share it as much
@@ -876,7 +891,7 @@ model-viewer {
   // sync 2nd (right) video to playing position of 1st (left) video
   window.onload = function(){
         var v1 = document.getElementById('v1');
-
+        // console.log("YEAH");
         v1.addEventListener("play", function() {
           document.getElementById('v2').play();
         });
@@ -897,29 +912,7 @@ model-viewer {
         });
 
   }
-  window.onload = function(){
-        var v3 = document.getElementById('v3');
 
-        v3.addEventListener("play", function() {
-          document.getElementById('v4').play();
-        });
-
-        v3.addEventListener("pause", function() {
-          document.getElementById('v4').pause();
-        });
-
-        v3.addEventListener("seeking", function() {
-          document.getElementById('v4').currentTime = v3.currentTime;
-        });
-
-        v3.addEventListener("seeked", function() {
-          document.getElementById('v4').currentTime = v3.currentTime;
-        });
-        v3.addEventListener("onloadstart", function() {
-          document.getElementById('v4').currentTime = v3.currentTime;
-        });
-
-  }
 </script>
 
 
