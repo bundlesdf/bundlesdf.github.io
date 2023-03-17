@@ -387,6 +387,42 @@ model-viewer {
 </section>
 
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class='title is-3'>Static Scene Results</div>
+
+      <!-- <div class='title is-4'>Method 1</div> -->
+      <div class="has-text-centered">
+        <div class="columns">
+          <div class="column has-text-centered ">
+            <span id="btn_doggie_kinectfusion" class="button is-info is-rounded">
+              KinectFusion
+            </span>
+            <span id="btn_doggie_droid" class="button is-normal is-rounded">
+              DROID-SLAM
+            </span>
+            <span id="btn_doggie_ours" class="button is-normal is-rounded">
+              Ours
+            </span>
+          </div>
+        </div>
+        <div class="columns is-vcentered">
+          <span>
+            <model-viewer id="m_doggie" src="static/models/doggie/doggie_kinectfusion.glb" shadow-intensity="1" ar
+              environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg"
+              camera-controls touch-action="pan-y">
+            </model-viewer>
+          </span>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  </div>
+</section>
+
+
 
 <script>
 
@@ -541,6 +577,31 @@ model-viewer {
     },
   }
 
+  var data_doggie = {
+    "ours":{
+      "model":"static/models/doggie/doggie_droid.glb"
+    },
+    // "nice":{
+    //   "video":"https://i.imgur.com/KwkC5KN.mp4",
+    //   "model":"static/models/sm1/nice_slam_smoothed.glb"
+    // },
+    // "bundletrack":{
+    //   "video":"https://i.imgur.com/y2CrSZg.mp4",
+    //   "model":"static/models/sm1/bundletrack_smoothed.glb"
+    // },
+    "droid":{
+      "model":"static/models/doggie/doggie_droid.glb"
+    },
+    // "sdf":{
+    //   "video":"https://i.imgur.com/wEs8gzc.mp4",
+    //   "model":"static/models/sm1/sdf2sdf_smoothed.glb"
+    // },
+    "kinect":{
+      "model":"static/models/doggie/doggie_kinectfusion.glb"
+    },
+  }
+
+
   data = data_ap13;
   function sync1to2video() {
     document.getElementById('v1').currentTime = 0;
@@ -553,6 +614,7 @@ model-viewer {
   m1 = document.getElementById("m1")
   m2 = document.getElementById("m2")
 
+  m_doggie = document.getElementById("m_doggie")
 
   method1 = 'gt';
   method2 = 'ours';
@@ -570,6 +632,8 @@ model-viewer {
 
     v2.setAttribute('src', data[method2]['video']);
     m2.setAttribute('src', data[method2]['model']);
+
+    m_doggie.setAttribute('src', data_doggie['ours']['model']);
 
   }
   // DATA LOADING
@@ -883,6 +947,24 @@ model-viewer {
     m2.setAttribute('src', data['kinect']['model']);
     method2 = "kinect";
     sync1to2video();
+  });
+
+  btn_doggie_kinectfusion = document.getElementById('btn_doggie_kinectfusion');
+  btn_doggie_kinectfusion.addEventListener('click', function onClick() {
+    btn_doggie_kinectfusion.className = 'button is-info is-rounded';
+    m_doggie.setAttribute('src', data_doggie['kinect']['model']);
+  });
+
+  btn_doggie_droid = document.getElementById('btn_doggie_droid');
+  btn_doggie_droid.addEventListener('click', function onClick() {
+    btn_doggie_droid.className = 'button is-info is-rounded';
+    m_doggie.setAttribute('src', data_doggie['droid']['model']);
+  });
+
+  btn_doggie_ours = document.getElementById('btn_doggie_ours');
+  btn_doggie_ours.addEventListener('click', function onClick() {
+    btn_doggie_ours.className = 'button is-info is-rounded';
+    m_doggie.setAttribute('src', data_doggie['ours']['model']);
   });
 
 // Original script to synchronize playback of two HTML5 video windows
