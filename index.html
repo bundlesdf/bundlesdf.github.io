@@ -391,7 +391,7 @@ model-viewer {
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class='title is-3'>Static Scene Results</div>
-      Our method not only works for the more challenging dynamic scenes, but also applies to commonly considered static scenes. We achieve better or comparable results to those methods specially designed for static scenes.
+      Our method not only works for the more challenging dynamic scenes, but also applies to commonly considered static scenes (moving camera). We achieve better or comparable results to those methods specially designed for static scenes.
       <br>
       <div style="text-align: center;">
         <video style="text-align:center; max-width: 60%;" id="v3" autoplay muted loop playsinline controls height="100%">
@@ -401,22 +401,20 @@ model-viewer {
       <div class="has-text-centered">
         <div class="columns">
           <div class="column has-text-centered ">
-            <span id="btn_doggie_kinectfusion" class="button is-info is-rounded">
+            <span id="btn_doggie_ours" class="button is-info is-rounded">
+              Ours
+            </span>
+            <span id="btn_doggie_kinectfusion" class="button is-normal is-rounded">
               KinectFusion
             </span>
             <span id="btn_doggie_droid" class="button is-normal is-rounded">
               DROID-SLAM
             </span>
-            <span id="btn_doggie_ours" class="button is-normal is-rounded">
-              Ours
-            </span>
           </div>
         </div>
       </div>
       <body style="margin: 0; padding: 0;">
-        <model-viewer id="m_doggie" src="static/models/doggie/doggie_kinectfusion.glb" shadow-intensity="1" style="width: 100%; aspect-ratio: 1 / 1;" ar
-        environment-image="static/models/thatch_chapel_2k.hdr" auto-rotate rotation-per-second="40deg"
-        camera-controls touch-action="pan-y">
+        <model-viewer id="m_doggie" src="static/models/doggie/doggie_droid.glb" shadow-intensity="1" style="width: 100%; aspect-ratio: 1 / 1;" ar environment-image="static/models/thatch_chapel_2k.hdr" camera-controls touch-action="pan-y">
         </model-viewer>
       </body>
     </div>
@@ -425,6 +423,18 @@ model-viewer {
 </section>
 <br>
 
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class='title is-3'>Contact</div>
+      <div>
+        For questions, feel free to contact Bowen Wen (bowenw@nvidia.com)
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <script>
@@ -635,9 +645,6 @@ model-viewer {
 
     v2.setAttribute('src', data[method2]['video']);
     m2.setAttribute('src', data[method2]['model']);
-
-    m_doggie.setAttribute('src', data_doggie['ours']['model']);
-
   }
   // DATA LOADING
   btn_ap13 = document.getElementById('ap13');
@@ -646,8 +653,6 @@ model-viewer {
     update_buttons();
     btn_ap13.className = 'button is-info is-rounded';
     // set the video
-
-
   });
 
   btn_sm1 = document.getElementById('sm1');
@@ -952,9 +957,9 @@ model-viewer {
     sync1to2video();
   });
 
+  btn_doggie_ours = document.getElementById('btn_doggie_ours');
   btn_doggie_kinectfusion = document.getElementById('btn_doggie_kinectfusion');
   btn_doggie_droid = document.getElementById('btn_doggie_droid');
-  btn_doggie_ours = document.getElementById('btn_doggie_ours');
 
   btn_doggie_kinectfusion.addEventListener('click', function onClick() {
     btn_doggie_kinectfusion.className = 'button is-info is-rounded';
