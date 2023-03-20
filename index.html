@@ -414,6 +414,9 @@ model-viewer {
             <span id="btn_doggie_droid" class="button is-normal is-rounded">
               DROID-SLAM
             </span>
+            <span id="btn_doggie_nice_slam" class="button is-normal is-rounded">
+              NICE-SLAM
+            </span>
           </div>
         </div>
       </div>
@@ -598,10 +601,9 @@ model-viewer {
     "ours":{
       "model":"static/models/doggie/doggie_ours.glb"
     },
-    // "nice":{
-    //   "video":"https://i.imgur.com/KwkC5KN.mp4",
-    //   "model":"static/models/sm1/nice_slam_smoothed.glb"
-    // },
+    "nice":{
+      "model":"static/models/doggie/doggie_nice_slam.glb"
+    },
     // "bundletrack":{
     //   "video":"https://i.imgur.com/y2CrSZg.mp4",
     //   "model":"static/models/sm1/bundletrack_smoothed.glb"
@@ -964,11 +966,13 @@ model-viewer {
   btn_doggie_ours = document.getElementById('btn_doggie_ours');
   btn_doggie_kinectfusion = document.getElementById('btn_doggie_kinectfusion');
   btn_doggie_droid = document.getElementById('btn_doggie_droid');
+  btn_doggie_nice_slam = document.getElementById('btn_doggie_nice_slam');
 
   btn_doggie_kinectfusion.addEventListener('click', function onClick() {
     btn_doggie_kinectfusion.className = 'button is-info is-rounded';
     btn_doggie_droid.className = 'button is-normal is-rounded';
     btn_doggie_ours.className = 'button is-normal is-rounded';
+    btn_doggie_nice_slam.className = 'button is-normal is-rounded';
     m_doggie.setAttribute('src', data_doggie['kinect']['model']);
   });
 
@@ -976,6 +980,7 @@ model-viewer {
     btn_doggie_droid.className = 'button is-info is-rounded';
     btn_doggie_kinectfusion.className = 'button is-normal is-rounded';
     btn_doggie_ours.className = 'button is-normal is-rounded';
+    btn_doggie_nice_slam.className = 'button is-normal is-rounded';
     m_doggie.setAttribute('src', data_doggie['droid']['model']);
   });
 
@@ -983,7 +988,16 @@ model-viewer {
     btn_doggie_ours.className = 'button is-info is-rounded';
     btn_doggie_kinectfusion.className = 'button is-normal is-rounded';
     btn_doggie_droid.className = 'button is-normal is-rounded';
+    btn_doggie_nice_slam.className = 'button is-normal is-rounded';
     m_doggie.setAttribute('src', data_doggie['ours']['model']);
+  });
+
+  btn_doggie_nice_slam.addEventListener('click', function onClick() {
+    btn_doggie_ours.className = 'button is-normal is-rounded';
+    btn_doggie_kinectfusion.className = 'button is-normal is-rounded';
+    btn_doggie_droid.className = 'button is-normal is-rounded';
+    btn_doggie_nice_slam.className = 'button is-info is-rounded';
+    m_doggie.setAttribute('src', data_doggie['nice']['model']);
   });
 
 // Original script to synchronize playback of two HTML5 video windows
