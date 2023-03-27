@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GETVCQ90R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9GETVCQ90R');
+  </script>
+
   <meta charset="utf-8">
   <meta name="description"
         content="">
@@ -68,8 +78,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/abs/2303.14158" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -78,8 +87,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/YdejLypqxD8"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://www.youtube.com/watch?v=5PymzKbKv8w" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
@@ -133,13 +141,24 @@ We present a near real-time method for 6-DoF tracking of an unknown object from 
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
+    <br>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/YdejLypqxD8"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/5PymzKbKv8w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview</h2>
+        <img src="static/images/pipeline_c.jpg" style="max-width: 700px">
+        <p align="left">
+          Framework overview. First, features are matched between consecutive segmented images, to obtain a coarse pose estimate (Sec. 3.1). Some of these posed frames are stored in a memory pool, to be used and refined later (Sec. 3.2). A pose graph is dynamically created from a subset of the memory pool (Sec. 3.3); online optimization refines all the poses in the graph jointly with the current pose. These updated poses are then stored back in the memory pool. Finally, all the posed frames in the memory pool are used to learn a Neural Object Field (in a separate thread) that models both geometry and visual texture (Sec. 3.4) of the object, while adjusting their previously estimated poses.
+        </p>
       </div>
     </div>
 
@@ -430,6 +449,19 @@ model-viewer {
 </section>
 <br>
 
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wen2023bundlesdf,
+  title={BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects},
+  author={Wen, Bowen and Tremblay, Jonathan and Blukis, Valts and Tyree, Stephen and Muller, Thomas and Evans, Alex and Fox, Dieter and Kautz, Jan and Birchfield, Stan},
+  journal={CVPR},
+  year={2023}
+}</code></pre>
+  </div>
+</section>
 
 
 <section class="hero">
